@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\54857979d288cb9cb2cb22150aa122ac05c69453\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="5ee29abfc804ebd51d65a4bde424c0ee74363939">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-a7cebe828af1a59966c5fd43e45c678743d1a276.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\df1d2042f8b0126f8958be1570c0fb76e9c23411\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="d81a3b0a16f48b4456f442552b62f4b1a472ce24">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-a45b477053db6aa496ba8d77c4db7bdd527e3770.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\c1b4a29055520112ebaca45b6e6e1aff8c0f5ce7\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="6003d64df88a6ce5e961fa2bad7f1b9b97689ac1">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-28564b7ee5c4406cc3aa92c405d6d4847e88b79d.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\a43b30a7e113550162a8deb3f8542028061f1b84\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="ec7d3099b4e3cf23230c78acaae438f3371e1c19">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-0f6ffd2ceff3dd985cf69e8263ea77bcc7f4c123.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\846dd61c4a5d6b70638d56dde5376047f907fdd7\output\jars\libs\converter-gson-2.2.0.jar"
+        revision="25.0.0"
+        sha1="57e4a03424c16c96f6e15b554008df9bac396d1f">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\converter-gson-2.2.0-55e31c23bc21813aff2d67f3c35c6905895801ed.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\c4b48a8e04dc9f8b652f4f75f85ee30c1d918a7b\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="b215e312bdc1ee7bfda31674eab5df8bad45c014">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-b2f8e27d67cf26651d910c4b45ca080cd3c519fb.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.0.0\a2d487452376193fc8c103dd2b9bd5f2b1b44563\common-1.0.0.jar"
+        revision="25.0.0"
+        sha1="a2d487452376193fc8c103dd2b9bd5f2b1b44563">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\common-1.0.0-a9c08fb9abffa568eb46af9087634aff457a9e6c.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\eb8148172acbdb4ae429ee50f1e07bc7e17723a9\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="efae381df589f3d4977c346c8a980f030315bb8b">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-661e28d0ee41e7b08394d54c044920ad124c5939.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\c8562117aa63b4307ce5a46b64e9db68f3226d5a\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="b6818f5804ca0b5eb089d902458faea4179eca1d">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-86b20d386b28b9e90c28fecd8ac4668edb8ee3f9.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\d92743329d7209b9cb9894d9d1ba72ef2e69e611\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="d35b57785e805406538454943d0ed0ba97f6e653">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-6f208b69670397866ad6640cf97cd9ccd0e4f6c7.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\d51d8fb8350fa726d981b5a5735950be1a2c6111\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="bfd85a88cf976eb2c54507cc914d8e8914c2f71e">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-c01c2206bb788d8ed7e23c586ec23632c930f45b.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\ddd50f1249b100b52cfd0241b74429d3023cf8ab\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="abf7c64e0bbaaa931738856734f76646ae62d9a5">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-da2d2fe55925ae9c7e6898edd4d0b1649d474f73.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.gradle\caches\modules-2\files-2.1\org.bouncycastle\bcpkix-jdk15on\1.57\5c96e34bc9bd4cd6870e6d193a99438f1e274ca7\bcpkix-jdk15on-1.57.jar"
+        revision="25.0.0"
+        sha1="5c96e34bc9bd4cd6870e6d193a99438f1e274ca7">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\bcpkix-jdk15on-1.57-a4be880eb022e26116d6fc0c37d1bdd1e13654af.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\3061b894cbaed4b683c7b28d5603693765f115f2\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="58b12bdb21a84f22e0dc3b047aeceb0a546b1b44">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-8886d8c9701c31bacf0c26d6c2abd5c5132591e1.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\2dfe2e15211ef194233013ab2a146190b6969ab0\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="1f9df8b2bfff203397548ee400789154968adfe8">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-e7369940b5c4822244f5305c3af57c983b81285f.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\3369df20486e6ac09f125d90b17db1f031ac6e75\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="6f4138a4e065826cb044d49faea4cfd7191773d1">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-cc2a591370c3b4412cb42ed63f0673d610329147.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\6c416fc605df992b61a67b0a22f30c3af14e0c9d\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="888983f51cf34f57a93ff16832552f2f15937212">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-8e825be23c88ddc89af006a1140469f00f97c3dd.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\77d3c200813dfabba7d7602adf04aa9f79b34748\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-7926ef5d945a219bdeec49e935c78995878876c0.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\c7cbfc7a7d36976b548b3134112517b62ccc7af0\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="ec24a63935fc5b8c630b1bb7cfd76a5d3e1f9269">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-4bf30dc9c3196e69183b3cd93ff6cc9d7f5ce10b.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\5bfc527f9dc7fd059a3d941fcb8bbf2ebcebfa75\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="c7626a9aa507bbbdc16188bc9a9f9bf3370c1ddd">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-be331f119c124214eee7e60f4bd02e387773fba1.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.0.0\e414a4cb28434e25c4f6aa71426eb20cf4874ae9\common-1.0.0.jar"
+        revision="25.0.0"
+        sha1="e414a4cb28434e25c4f6aa71426eb20cf4874ae9">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\common-1.0.0-b7682c32047386102bc4710d3c6f07bd2c7f87d4.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\cc9d5ebb6e81a725e2b8aa56b4961f4d444f88d0\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="0a5d5553c308643a9022f15513ebdd59e9c78d82">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-1502a715a2d03a2a2fe0ac450d86b3ea5ba0aecc.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\846dd61c4a5d6b70638d56dde5376047f907fdd7\output\jars\libs\logging-interceptor-3.6.0.jar"
+        revision="25.0.0"
+        sha1="09793ad9c2308635c4e8a862d18f8b32a05cbb9d">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\logging-interceptor-3.6.0-a29b65c4203912732a93314ffd56ad49af1c0c16.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\c42f456a9b21ea8b4b743a6ebc50d383e1882923\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="bdcc2a9572f18b8c90a3a157cab6cdfc97c6c736">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-06d41ec16664cea4890cb348fe9fbf71708e33ea.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\c5aae445c985377dd47e1052312d63be7728787f\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="44098e691b36776973374ac03afe0225b17f8a74">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-52571b111ed62ff1938a8ecad4454b39c43f8a54.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\d3366d2ca05da733c23200c84c4622bffb5aa850\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="b12cd9c87c3dfb012a911b6e38d2444ed0a65e1f">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-693983fd972a33b8a88319a476e47f20e92954e0.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\846dd61c4a5d6b70638d56dde5376047f907fdd7\output\jars\libs\sqlcipher.jar"
+        revision="25.0.0"
+        sha1="818907f3eeec0c3a14c3f07f553ab5517f280310">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\sqlcipher-bb193cca44eb7937fbc33f0fe121a029fdfa9e68.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\846dd61c4a5d6b70638d56dde5376047f907fdd7\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="251fc93f271c8a52706944d7bc1f6c9c99b16759">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-e6b6943cc54bbc5cbbdb8992207900b6f68be520.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.2\3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf\gson-2.8.2.jar"
+        revision="25.0.0"
+        sha1="3edcfe49d2c6053a70a2a47e4e1c2f94998a49cf">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\gson-2.8.2-ef59fd8147aec84bdce79d4561399ae1c3b84a09.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\a17ed0018c2aa9b15afb1f8fa22c6e0f56942272\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="125bce1fb2d481b964fabf75f0949957ebe9ecd1">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-6e83e27d009f074859e248246e51254896278e0b.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\fe6d0670f1a82617642e0ef7645d8c75a96550f3\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="bb004ea36f8802bad30000e286c177691740a322">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-419143d7552b650fbd5ca90fc9c8718ed15c6ac3.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\70cf55c6710e2941f894153b6a97548846eeb430\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="2a7ffe939ffd830b5d4052f3c1c4c235923790ce">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-9f6d14aafe2810d8793198d7f3050b7bb1837a4f.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\b74d1be7d6aff38533af4dc76623e59c38b37721\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="b15c6ded887ad967e20bb335c1a121b253c04dce">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-d10e2e580aaa8b142656d5e731c30b2f1eaedda1.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\43961f57fbd7851fd571c6c8e14a61a3f87aa433\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="2025f9d449994b40c79b1afed2d625c1a065d995">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-477d2aaea61ca25f9b1d37719627c242c4a2ec26.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.gradle\caches\modules-2\files-2.1\com.android.support\support-annotations\26.1.0\814258103cf26a15fcc26ecce35f5b7d24b73f8\support-annotations-26.1.0.jar"
+        revision="25.0.0"
+        sha1="0814258103cf26a15fcc26ecce35f5b7d24b73f8">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\support-annotations-26.1.0-f67fa8a012944cbb70ce25c20f4c4db569af67d1.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\3bdaf12c4303169f866834099c315c2f7bccb17c\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="0bb2f0934fa55799508ba58ffc9ba579b35744b8">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-c8c410de1111f10c783e894c6d8931de31345221.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\c5b4432051475eeb800b51373d809ce2054d850a\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="b136ac09f209c1d91fec7db8518e33d4373c8f39">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-3c22299b296eff0d83cfb196ba2819fcacf40b5c.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\e09a67b2043c2aac4f46dcb67f5e1684da0ffd70\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="12032271e6be735e811ad529cb08ff066c381640">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-94120d2a32f4841c5fb3ae1f27467a7bc3d5a38e.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\c15f2e4aa925088808259f801acd084658460bfb\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="cfa47e1b140562d47bc670629d07e209cd8b02c4">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-d3927a7311bc5013325b8abffa3158cbacb4a16d.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.gradle\caches\modules-2\files-2.1\org.greenrobot\eventbus\3.0.0\ddd99896e9569eaababbe81b35d80e1b91c4ad85\eventbus-3.0.0.jar"
+        revision="25.0.0"
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\eventbus-3.0.0-75586982078f21168e33cf171933d0d25c4f1132.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\5812acce6dee87bbfa248b79d04897ad5665fb09\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="6f233cb35a6ea92364130d2d48791c461ec65983">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-b92c4d51fc8127700095a9f6e099d4ac211019f9.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\846dd61c4a5d6b70638d56dde5376047f907fdd7\output\jars\libs\adapter-rxjava2-2.2.0.jar"
+        revision="25.0.0"
+        sha1="f0672896d0ccddf52382fe5d4c188792c81f5a8f">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\adapter-rxjava2-2.2.0-cb870b713357caa23c5be3843168df0bf7ba27b1.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\846dd61c4a5d6b70638d56dde5376047f907fdd7\output\jars\libs\sqlbrite-0.6.2.jar"
+        revision="25.0.0"
+        sha1="177d78bffd72414e384c8d96f76601f8b19f83ea">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\sqlbrite-0.6.2-ca644cad7f5cada69a85633c99671c1a5dbe8083.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\2ac721008fe0c96ab920c0da6e7b3401c5e02fd3\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="b2349ddfe04831042844cbf055e5a072da37ddf8">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-1ac0665738fa092c79b40752f069ffd84c6db293.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\2cdfbd0e0392088935ef065ba00cf163000e2f37\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="a3826817a4de1daa170c33bbc04db24ab6826bd5">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-d492fda5ca31c1b8524cf103ebb513bcf72fcd49.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\caa18e949b2998c387bfbace0ea083ae6157dfe0\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="e4851331b3944beb6e7f77316a7661f53781da62">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-faaea38eaff478f07e550439e8506b776c9b713b.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\846dd61c4a5d6b70638d56dde5376047f907fdd7\output\jars\libs\retrofit-2.2.0.jar"
+        revision="25.0.0"
+        sha1="b0d9c3a922a7794e960b65b0172606144b185811">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\retrofit-2.2.0-b8f7e8775001dde41a21e4afe23ca0ea48dade41.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.gradle\caches\modules-2\files-2.1\com.android.support.constraint\constraint-layout-solver\1.1.3\bde0667d7414c16ed62d3cfe993cff7f9d732373\constraint-layout-solver-1.1.3.jar"
+        revision="25.0.0"
+        sha1="bde0667d7414c16ed62d3cfe993cff7f9d732373">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\constraint-layout-solver-1.1.3-0b9024c9b06bab641b948c6604f20b0b7e8e7f33.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\ceee0dc716e23995976d91f55363b533b9093075\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="25f55515117e14a658120a7b01a9ea5170409db4">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-ca9882dfda7c016b50ce7e91226fa3ae94f42436.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\9ba94dea2e97d64eaec0a0122b12ab8324f5be06\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="da5c606c36276a12a356e351882044c6b4b9e8d4">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-ebaf7f9b448d1ac488734510905b049b046f6a86.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\79a5be5d3cd979ba6bb1ba44c20d1a5fffed4739\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-2d6eb5b34a6f854404582951b4c29ec1b6070759.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\a55800505915ee8c8b3d6d97d6bb958fb7c3610b\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="dbae35d7fc3427d30bef0037bdf61ad0d8d984f8">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-dec9769bb4ab3185453614ed9d1b7d2b60155542.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\7bd89a9ed1825bc877f753146ed0aec5184355dc\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="7d67042688d34474a82fe4ef4c6514ef471377ef">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-80f7f6dbe29f3401994fab079c29143af67a6d5b.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\b1ef567a94a665f3f2c710a8ea5df14b6099a60f\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="40392f30a601db5675cdf18192aab013d6fee6ec">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-5094aca8d0dbd4dd50f8682f141e8eba79e0e1d8.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\846dd61c4a5d6b70638d56dde5376047f907fdd7\output\jars\libs\netty-3.5.2.Final.jar"
+        revision="25.0.0"
+        sha1="d220934543e96a2dd4bb875a79d4ac7c7cd8d551">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\netty-3.5.2.Final-3d2e5ba568da4fb16e64926d0d7f9b4755c438c0.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\b22440df468f1377a0dadda8a598f27ea08836db\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="4b32372f6821e003ae24cd3389bdd7925247f100">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-d89f8aff2d0092a87fbdf635ae5baf6b204c7cdf.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\ee578768225fbc4b7a726cc0cead509040579727\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="cce5792fa30ee8520620f298bf920309423b180f">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-3740f1d215640eaf01f20b80ce97c4736cb04ee7.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\b477ed485aeb13875f8b25e4b1917ae4c8ae22ef\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="3683531139103cc263b71d8b5ac6062832a8fd30">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-acfcb1c13d64edd249ca8d6bc896d156f648c364.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.gradle\caches\modules-2\files-2.1\org.reactivestreams\reactive-streams\1.0.0\14b8c877d98005ba3941c9257cfe09f6ed0e0d74\reactive-streams-1.0.0.jar"
+        revision="25.0.0"
+        sha1="14b8c877d98005ba3941c9257cfe09f6ed0e0d74">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\reactive-streams-1.0.0-9fedcdf717bf7d3d0fd44870c7e747cf9b319f98.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\9a0d05a569437d3c2a60e2d77d7b2a27e5d93346\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="b62fdc4cfef174c1e456014195c83fa7de7dc041">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-a899dad4e702638bf9d8b5f7623d471fb5940427.jar" />
+    </item>
+    <item
+        jar="C:\Users\RoboticaVR\.android\build-cache\67c521fac03dba7085ae0b41407fe384dbbbf5f5\output\jars\classes.jar"
+        revision="25.0.0"
+        sha1="d395c5142f474891c7750f13b6a85d14682f166b">
+        <dex dex="C:\Users\RoboticaVR\Desktop\Tesis_Android_App\Main Drone Control App (sf.munera10)\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-67718cba759336d4a6066a6c07b85f7d9818b8fe.jar" />
+    </item>
+
+</items>

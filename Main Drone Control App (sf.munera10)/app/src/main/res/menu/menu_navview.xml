@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_seccion_config"
+            android:title="Configure flight behavior"/>
+        <item
+            android:id="@+id/menu_seccion_camera"
+            android:title="Configure camera tasks"/>
+        <item
+            android:id="@+id/menu_seccion_upload"
+            android:title="Upload info to aircraft"/>
+    </group>
+
+    <item
+        android:id="@+id/navigation_subheader"
+        android:title="Extras">
+        <menu>
+            <item
+                android:id="@+id/menu_opcion_info"
+                android:title="Route info"/>
+            <item
+                android:id="@+id/menu_opcion_trace"
+                android:title="Route trace"/>
+            <item
+                android:id="@+id/menu_opcion_livefeed"
+                android:title="Live Feed"/>
+            <item
+                android:id="@+id/menu_opcion_acerca"
+                android:title="About"/>
+        </menu>
+    </item>
+</menu>

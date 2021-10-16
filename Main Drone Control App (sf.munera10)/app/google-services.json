@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "796559662179",
+    "firebase_url": "https://drone-control-app.firebaseio.com",
+    "project_id": "drone-control-app",
+    "storage_bucket": "drone-control-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796559662179:android:4b70d0198c2423ce",
+        "android_client_info": {
+          "package_name": "com.dji.GSDemo.GoogleMap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "796559662179-6f40674aj2md9lict4frr5qrpisah1um.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB7nn4deiOh_tzj4l5vaPExTyl6FEx_c4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
