@@ -26,6 +26,9 @@
                 android:id="@+id/menu_opcion_livefeed"
                 android:title="Live Feed"/>
             <item
+                android:id="@+id/menu_opcion_download"
+                android:title="Download files"/>
+            <item
                 android:id="@+id/menu_opcion_acerca"
                 android:title="About"/>
         </menu>

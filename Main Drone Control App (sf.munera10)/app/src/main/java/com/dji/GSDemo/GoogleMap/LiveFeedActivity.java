@@ -19,10 +19,12 @@ import dji.common.camera.SystemState;
 import dji.common.error.DJIError;
 import dji.common.product.Model;
 import dji.common.util.CommonCallbacks;
+import dji.log.DJILog;
 import dji.sdk.base.BaseProduct;
 import dji.sdk.camera.Camera;
 import dji.sdk.camera.VideoFeeder;
 import dji.sdk.codec.DJICodecManager;
+import dji.sdk.media.MediaManager;
 
 public class LiveFeedActivity extends AppCompatActivity implements TextureView.SurfaceTextureListener, View.OnClickListener{
 
@@ -79,10 +81,28 @@ public class LiveFeedActivity extends AppCompatActivity implements TextureView.S
 
  */
 
-        Camera camera = DJIDemoApplication.getCameraInstance();
+        final Camera camera = DJIDemoApplication.getCameraInstance();
 
         if (camera != null) {
+            camera.getMode(new CommonCallbacks.CompletionCallbackWith<SettingsDefinitions.CameraMode>() {
+                @Override
+                public void onSuccess(SettingsDefinitions.CameraMode cameraMode) {
+                    if (cameraMode == SettingsDefinitions.CameraMode.MEDIA_DOWNLOAD)
+                    {
+                        camera.setMode(SettingsDefinitions.CameraMode.SHOOT_PHOTO, new CommonCallbacks.CompletionCallback() {
+                            @Override
+                            public void onResult(DJIError djiError) {
 
+                            }
+                        });
+                    }
+                }
+
+                @Override
+                public void onFailure(DJIError djiError) {
+
+                }
+            } );
             camera.setSystemStateCallback(new SystemState.Callback() {
                 @Override
                 public void onUpdate(SystemState cameraSystemState) {
@@ -119,6 +139,7 @@ public class LiveFeedActivity extends AppCompatActivity implements TextureView.S
 
         }
     }
+
 
     private void initUI() {
         // init mVideoSurface

@@ -2,6 +2,7 @@ package com.dji.GSDemo.GoogleMap;
 
 import android.Manifest;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,7 +12,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Environment;
 import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
 import android.os.Bundle;
@@ -145,8 +145,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private List<MediaFile> mediaFileList = new ArrayList<MediaFile>();
     private MediaManager.FileListState currentFileListState = MediaManager.FileListState.UNKNOWN;
     private FetchMediaTaskScheduler scheduler;
-    File destDir = new File(Environment.getExternalStorageDirectory().getPath() + "/MediaManagerDemo/");
-
+    File destDir = new File(Environment.getExternalStorageDirectory().getPath() + "/DownloadedMedia/");
+    File destDirImages = new File(Environment.getExternalStorageDirectory().getPath() + "/DownloadedMedia/Images/");
+    File destDirVideos = new File(Environment.getExternalStorageDirectory().getPath() + "/DownloadedMedia/Videos/");
+    private int currentProgress = -1;
+    private int mediaFileListSize = 0;
+    private int filesDownloadedSuccess = 0;
+    private int filesDownloadedFailure = 0;
+    private int totalDownloadProgress = 0;
+    private ProgressDialog mLoadingDialog;
+    private ProgressDialog mDownloadDialog;
 
     /*Accion que ejecutara la camara*/
     //private TASK cameraTask;
@@ -201,6 +209,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         locate.setOnClickListener(this);
         start.setOnClickListener(this);
         stop.setOnClickListener(this);
+
+        mLoadingDialog = new ProgressDialog(MainActivity.this);
+        mLoadingDialog.setMessage("Getting file list");
+        mLoadingDialog.setCanceledOnTouchOutside(false);
+        mLoadingDialog.setCancelable(false);
+
+        mDownloadDialog = new ProgressDialog(MainActivity.this);
+        mDownloadDialog.setTitle("Downloading files");
+        mDownloadDialog.setIcon(android.R.drawable.ic_dialog_info);
+        mDownloadDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        mDownloadDialog.setCanceledOnTouchOutside(false);
+        mDownloadDialog.setCancelable(true);
+        mDownloadDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                if (mMediaManager != null) {
+                    mMediaManager.exitMediaDownloading();
+                }
+            }
+        });
+
 
     }
 
@@ -277,6 +306,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 break;
                             case R.id.menu_opcion_livefeed:
                                 showLiveFeed();
+                                break;
+                            case R.id.menu_opcion_download:
+                                downloadFiles();
                                 break;
                             case R.id.menu_opcion_acerca:
                                 setResultToToast("GSDemo. Developed by Nelson Sánchez & Santiago Múnera.");
@@ -405,9 +437,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public void onExecutionFinish(@Nullable final DJIError error) {
             setResultToToast("Execution finished: " + (error == null ? "Success!" : error.getDescription()));
             tasksUploaded = false;
-
-            downloadFileByIndex();
-            showToast("Terminamos...");
+            getFileList();
         }
     };
 
@@ -893,6 +923,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onResult(DJIError error) {
                 setResultToToast("Mission Stop: " + (error == null ? "Successfully" : error.getDescription()));
+                getFileList();
             }
         });
 
@@ -1067,13 +1098,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     };
 
     private void initMediaManager() {
+        showToast("Init Media Manager");
         if (DJIDemoApplication.getProductInstance() == null) {
             mediaFileList.clear();
             DJILog.e(TAG, "Product disconnected");
             return;
         } else {
             if (null != DJIDemoApplication.getCameraInstance() && DJIDemoApplication.getCameraInstance().isMediaDownloadModeSupported()) {
-                mMediaManager = DJIDemoApplication.getCameraInstance().getMediaManager();
+                if (mMediaManager == null){
+                    mMediaManager = DJIDemoApplication.getCameraInstance().getMediaManager();
+                }
+
                 if (null != mMediaManager) {
                     mMediaManager.addUpdateFileListStateListener(this.updateFileListStateListener);
                     DJIDemoApplication.getCameraInstance().setMode(SettingsDefinitions.CameraMode.MEDIA_DOWNLOAD, new CommonCallbacks.CompletionCallback() {
@@ -1081,7 +1116,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         public void onResult(DJIError error) {
                             if (error == null) {
                                 DJILog.e(TAG, "Set cameraMode success");
-
                                 getFileList();
                             } else {
                                 setResultToToast("Set cameraMode failed");
@@ -1090,6 +1124,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     });
                     if (mMediaManager.isVideoPlaybackSupported()) {
                         DJILog.e(TAG, "Camera support video playback!");
+
                     } else {
                         setResultToToast("Camera does not support video playback!");
                     }
@@ -1109,12 +1144,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             if ((currentFileListState == MediaManager.FileListState.SYNCING) || (currentFileListState == MediaManager.FileListState.DELETING)){
                 DJILog.e(TAG, "Media Manager is busy.");
+                showToast("Media Manager is busy:" + currentFileListState.toString());
             }else{
 
                 mMediaManager.refreshFileListOfStorageLocation(SettingsDefinitions.StorageLocation.SDCARD, new CommonCallbacks.CompletionCallback() {
 
                     @Override
                     public void onResult(DJIError djiError) {
+                        showProgressDialog();
                         if (null == djiError) {
 
 
@@ -1144,8 +1181,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     }
                                 }
                             });
+                            hideProgressDialog();
+                            showToast(mediaFileList.size() + " files added to list.");
                         } else {
-
+                            hideProgressDialog();
                             setResultToToast("Get Media File List Failed:" + djiError.getDescription());
                         }
                     }
@@ -1178,14 +1217,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     };
 
-    private void downloadFileByIndex(){
+
+    private void downloadFiles(){
+        mediaFileListSize = mediaFileList.size();
+        setResultToToast("Download started.");
+        ShowDownloadProgressDialog();
+        int val =0;
         for(int i = 0; i < mediaFileList.size(); i++) {
-            mediaFileList.get(i).fetchFileData(destDir, null, new DownloadListener<String>() {
+            File dir = destDir;
+            if(mediaFileList.get(i).getMediaType() == MediaFile.MediaType.JPEG){
+                dir = destDirImages;
+            } else if (mediaFileList.get(i).getMediaType() == MediaFile.MediaType.MOV){
+                dir = destDirVideos;
+            }
+            mediaFileList.get(i).fetchFileData(dir, null, new DownloadListener<String>() {
                 @Override
                 public void onFailure(DJIError error) {
 
                     setResultToToast("Download File Failed" + error.getDescription());
-
+                    currentProgress = -1;
+                    filesDownloadedFailure++;
+                    if ((filesDownloadedSuccess + filesDownloadedFailure) == mediaFileListSize){
+                        HideDownloadProgressDialog();
+                        setResultToToast("Download finished: " + filesDownloadedSuccess + "/" + mediaFileListSize + " files downloaded.");
+                        filesDownloadedFailure = 0;
+                        filesDownloadedSuccess = 0;
+                        totalDownloadProgress = 0;
+                    }
                 }
 
                 @Override
@@ -1195,21 +1253,79 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 @Override
                 public void onRateUpdate(long total, long current, long persize) {
                     int tmpProgress = (int) (1.0 * current / total * 100);
+                    if (tmpProgress != currentProgress) {
+                        totalDownloadProgress += tmpProgress/mediaFileListSize;
+                        mDownloadDialog.setProgress(totalDownloadProgress);
+                        currentProgress = tmpProgress;
 
+                    }
                 }
 
                 @Override
                 public void onStart() {
-                    showToast("Iniciamos...");
+                    currentProgress = -1;
                 }
 
                 @Override
                 public void onSuccess(String filePath) {
+                    currentProgress = -1;
+                    filesDownloadedSuccess++;
+                    if ((filesDownloadedSuccess + filesDownloadedFailure) == mediaFileListSize){
+                        HideDownloadProgressDialog();
+                        setResultToToast("Download finished: " + filesDownloadedSuccess + "/" + mediaFileListSize + " files downloaded.");
+                        filesDownloadedFailure = 0;
+                        filesDownloadedSuccess = 0;
+                        totalDownloadProgress = 0;
+                    }
+                }
+            });
+        }
+        if (mediaFileListSize == 0){
+            HideDownloadProgressDialog();
+        }
 
-                    setResultToToast("Download File Success" + ":" + filePath);
 
+    }
+
+    private void showProgressDialog() {
+        runOnUiThread(new Runnable() {
+            public void run() {
+                if (mLoadingDialog != null) {
+                    mLoadingDialog.show();
+                }
+            }
+        });
+    }
+
+    private void hideProgressDialog() {
+        runOnUiThread(new Runnable() {
+            public void run() {
+                if (null != mLoadingDialog && mLoadingDialog.isShowing()) {
+                    mLoadingDialog.dismiss();
+                }
+            }
+        });
+    }
+
+    private void ShowDownloadProgressDialog() {
+        if (mDownloadDialog != null) {
+            runOnUiThread(new Runnable() {
+                public void run() {
+                    mDownloadDialog.incrementProgressBy(-mDownloadDialog.getProgress());
+                    mDownloadDialog.show();
                 }
             });
         }
     }
+
+    private void HideDownloadProgressDialog() {
+        if (null != mDownloadDialog && mDownloadDialog.isShowing()) {
+            runOnUiThread(new Runnable() {
+                public void run() {
+                    mDownloadDialog.dismiss();
+                }
+            });
+        }
+    }
+
 }
