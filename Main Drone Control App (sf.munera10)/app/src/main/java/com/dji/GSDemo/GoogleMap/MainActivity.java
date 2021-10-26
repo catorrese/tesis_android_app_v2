@@ -100,6 +100,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //Firebase
     FirebaseDatabase database;
     ArrayList<PathPoint> pathFromFirebase;
+    ArrayList<ExtendedPathPoint> extendedPathFromFirebase;
     final static double PI = 3.14159265358979323846;
     final static double r_earth = 6378000;
     final static int LAUNCH_TASKS_ACTIVITY = 1;
@@ -437,7 +438,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public void onExecutionFinish(@Nullable final DJIError error) {
             setResultToToast("Execution finished: " + (error == null ? "Success!" : error.getDescription()));
             tasksUploaded = false;
-            getFileList();
+            DJIDemoApplication.getCameraInstance().setMode(SettingsDefinitions.CameraMode.MEDIA_DOWNLOAD, new CommonCallbacks.CompletionCallback() {
+                @Override
+                public void onResult(DJIError error) {
+                    if (error == null) {
+                        DJILog.e(TAG, "Set cameraMode success");
+                        getFileList();
+                    } else {
+                        setResultToToast("Set cameraMode failed");
+                    }
+                }
+            });
         }
     };
 
@@ -802,6 +813,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     case VIDEO: {
                         if (initVideo) {
                             WaypointAction action = new WaypointAction(WaypointActionType.START_RECORD, 0);
+
                             waypointMissionBuilder.getWaypointList().get(tempId - 2).addAction(action);
                             initVideo = false;
                         }
@@ -826,9 +838,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             waypointMissionBuilder.getWaypointList().get(tempId - 2).addAction(action1);
                             waypointMissionBuilder.getWaypointList().get(tempId - 2).addAction(action2);
                         }
+                        break;
                     }
                     case INTERVAL:{
                         waypointMissionBuilder.getWaypointList().get(tempId - 2).shootPhotoTimeInterval = 2;
+                        break;
                     }
                 }
             }
@@ -923,7 +937,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onResult(DJIError error) {
                 setResultToToast("Mission Stop: " + (error == null ? "Successfully" : error.getDescription()));
-                getFileList();
+                DJIDemoApplication.getCameraInstance().setMode(SettingsDefinitions.CameraMode.MEDIA_DOWNLOAD, new CommonCallbacks.CompletionCallback() {
+                    @Override
+                    public void onResult(DJIError error) {
+                        if (error == null) {
+                            DJILog.e(TAG, "Set cameraMode success");
+                            getFileList();
+                        } else {
+                            setResultToToast("Set cameraMode failed");
+                        }
+                    }
+                });
             }
         });
 
@@ -955,10 +979,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void retreivePathFromDatabase(){
         //Initialize Array of pathpoints
         pathFromFirebase = new ArrayList<PathPoint>();
+        extendedPathFromFirebase = new ArrayList<ExtendedPathPoint>();
+        DatabaseReference ref = database.getReference("PATH-"+IDPATH);
 
         //DatabaseReference ref = database.getReference("server/saving-data/fireblog/posts");
         //DatabaseReference ref = database.getReference("PATH-0/PATH");
-        DatabaseReference ref = database.getReference("PATH-"+IDPATH+"/PATH");
+
 
         // Attach a listener to read the data at our posts reference
         ref.addValueEventListener(new ValueEventListener() {
@@ -967,35 +993,75 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 System.out.println("FirebaseTest2:"+dataSnapshot.getValue());
                 System.out.println("FirebaseTest2: Count of Path Points: "+(int)(dataSnapshot.getChildrenCount()));
 
+                DataSnapshot path = dataSnapshot.child("/PATH");
+
+                if(dataSnapshot.hasChild("/description")){
+                    DataSnapshot description = dataSnapshot.child("/description");
+                    ExtendedPathPoint[] path_Temp = new ExtendedPathPoint[(int)path.getChildrenCount()];
+                    for (DataSnapshot userSnapshot: path.getChildren()) {
+
+                        try {
+                            ExtendedPathPoint path_Point = userSnapshot.getValue(ExtendedPathPoint.class);
+                            path_Temp[path_Point.getID()]=path_Point;
+                            double a = 1.0+path_Point.getZLatitude();
+                    }
+                        catch (Exception e)
+                        {
+                            showToast("Exploit111 "+e.getMessage());
+                        }
+
+
+                    }
+
+                    pathFromFirebase = new ArrayList<PathPoint>();
+                    extendedPathFromFirebase = new ArrayList<ExtendedPathPoint>();
+                    for(int i = 0;i<path.getChildrenCount();i++)
+                    {
+                        extendedPathFromFirebase.add(path_Temp[i]);
+                        PathPoint temp = new PathPoint(path_Temp[i].YAltitude, path_Temp[i].ZLatitude, path_Temp[i].XLongitude, path_Temp[i].ID);
+                        pathFromFirebase.add(temp);
+                    }
+                    showToast("Path have been found");
+                    showToast(description.getValue(String.class));
+
+                    //Add path_point as way_point in map
+                    updatedWayPointsFromPathPoint();
+                }
+
+                else {
+                    PathPoint[] path_Temp = new PathPoint[(int)path.getChildrenCount()];
+                    for (DataSnapshot userSnapshot: path.getChildren()) {
+
+                        try {
+                            PathPoint path_Point = userSnapshot.getValue(PathPoint.class);
+                            path_Temp[path_Point.getID()]=path_Point;
+                            double a = 1.0+path_Point.getZLatitude();
+                        }
+                        catch (Exception e)
+                        {
+                            showToast("Exploit111 "+e.getMessage());
+                        }
+
+
+                    }
+
+                    pathFromFirebase = new ArrayList<PathPoint>();
+                    for(int i = 0;i<path.getChildrenCount();i++)
+                    {
+                        pathFromFirebase.add(path_Temp[i]);
+                    }
+                    showToast("Path have been found");
+
+                    //Add path_point as way_point in map
+                    updatedWayPointsFromPathPoint();
+                }
+
+
 
 
                 //showToast("FirebaseTest2: Count of Path Points: "+(int)(dataSnapshot.getChildrenCount()));
 
-                PathPoint[] path_Temp = new PathPoint[(int)dataSnapshot.getChildrenCount()];
-                for (DataSnapshot userSnapshot: dataSnapshot.getChildren()) {
 
-                    try {
-                        PathPoint path_Point = userSnapshot.getValue(PathPoint.class);
-                        path_Temp[path_Point.getID()]=path_Point;
-                        double a = 1.0+path_Point.getZLatitude();
-                    }
-                    catch (Exception e)
-                    {
-                        showToast("Exploit111 "+e.getMessage());
-                    }
-
-
-                }
-
-                pathFromFirebase = new ArrayList<PathPoint>();
-                for(int i = 0;i<dataSnapshot.getChildrenCount();i++)
-                {
-                    pathFromFirebase.add(path_Temp[i]);
-                }
-                showToast("Path have been found");
-
-                //Add path_point as way_point in map
-                updatedWayPointsFromPathPoint();
             }
 
             @Override
@@ -1014,6 +1080,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             waypointList = new ArrayList<>();
             pointers = new ArrayList<LatLng>();
+            boolean startRecord = true;
             for(int i = 0;i<pathFromFirebase.size();i++)
             {
                 Waypoint newWaypont = getWayPointFromPathPoint(pathFromFirebase.get(i));
@@ -1031,6 +1098,52 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 pointers.add(pointer);
                 //Add Waypoints to Waypoint arraylist;
                 if (waypointMissionBuilder != null) {
+                    if(!extendedPathFromFirebase.isEmpty()){
+
+                        switch (extendedPathFromFirebase.get(i).getTask()){
+                            case 1: {
+                                WaypointAction action = new WaypointAction(WaypointActionType.START_TAKE_PHOTO, 0);
+                                newWaypont.addAction(action);
+                                break;
+                            }
+                            case 2:{
+                                if (startRecord){
+                                    WaypointAction action = new WaypointAction(WaypointActionType.START_RECORD, 0);
+                                    newWaypont.addAction(action);
+                                    startRecord = false;
+                                }
+                                else{
+                                    WaypointAction action = new WaypointAction(WaypointActionType.STOP_RECORD, 0);
+                                    newWaypont.addAction(action);
+                                    startRecord = true;
+                                }
+                                break;
+                            }
+                            case 3: {
+                                int degrees = 60;
+                                int rotation = 0;
+                                for(int j = 0; j < 6; j++) {
+                                    rotation += degrees;
+                                    if(rotation > 180)
+                                    {
+                                        rotation = rotation - 360;
+                                    }
+                                    WaypointAction action1 = new WaypointAction(WaypointActionType.START_TAKE_PHOTO, 0);
+                                    WaypointAction action2 = new WaypointAction(WaypointActionType.ROTATE_AIRCRAFT, rotation);
+                                    newWaypont.addAction(action1);
+                                    newWaypont.addAction(action2);
+                                }
+                                break;
+                            }
+                            case 4: {
+                                newWaypont.shootPhotoTimeInterval = 2;
+                                break;
+                            }
+                            default:
+                                break;
+                        }
+
+                    }
                     waypointList.add(newWaypont);
                     waypointMissionBuilder.waypointList(waypointList).waypointCount(waypointList.size());
                 }else
@@ -1050,10 +1163,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Waypoint getWayPointFromPathPoint(PathPoint point)
     {
-        double new_latitude  = droneLocationLat  + (point.getZLatitude() / r_earth) * (180 / PI);
-        double new_longitude = droneLocationLng + (point.getXLongitude() / r_earth) * (180 / PI) / Math.cos(droneLocationLat * PI/180);
+        if(extendedPathFromFirebase.isEmpty()){
+            double new_latitude  = droneLocationLat  + (point.getZLatitude() / r_earth) * (180 / PI);
+            double new_longitude = droneLocationLng + (point.getXLongitude() / r_earth) * (180 / PI) / Math.cos(droneLocationLat * PI/180);
 
-        return new Waypoint(new_latitude,new_longitude,(float)point.getYAltitude());
+            return new Waypoint(new_latitude,new_longitude,(float)point.getYAltitude());
+        }
+        else{
+            return new Waypoint(point.getZLatitude(),point.getXLongitude(),(float)point.getYAltitude());
+        }
+
     }
 
     private Waypoint getWayPointFromPathPointFixed(PathPoint point)

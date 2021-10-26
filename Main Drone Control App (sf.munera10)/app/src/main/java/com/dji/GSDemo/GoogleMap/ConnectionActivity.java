@@ -91,10 +91,14 @@ public class ConnectionActivity extends Activity implements View.OnClickListener
 
         //Test firebase
         // Write a message to the database
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
+        /*
         DatabaseReference myRef = database.getReference("message");
 
         myRef.setValue("Hello, World!");
+
+         */
 
 
         //Test recuperar info firebase

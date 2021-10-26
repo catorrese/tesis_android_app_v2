@@ -2,10 +2,10 @@ package com.dji.GSDemo.GoogleMap;
 
 public class PathPoint {
 
-    private  double YAltitude;
-    private  double ZLatitude;
-    private  double XLongitude;
-    private  int ID;
+    protected  double YAltitude;
+    protected  double ZLatitude;
+    protected  double XLongitude;
+    protected  int ID;
 
     public PathPoint(double YAltitude, double ZLatitude, double XLongitude, int ID){
         this.YAltitude = YAltitude;
