@@ -1217,7 +1217,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     };
 
     private void initMediaManager() {
-        showToast("Init Media Manager");
+
         if (DJIDemoApplication.getProductInstance() == null) {
             mediaFileList.clear();
             DJILog.e(TAG, "Product disconnected");
@@ -1301,7 +1301,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 }
                             });
                             hideProgressDialog();
-                            showToast(mediaFileList.size() + " files added to list.");
+                            showToast(mediaFileList.size() + " files ready to download.");
                         } else {
                             hideProgressDialog();
                             setResultToToast("Get Media File List Failed:" + djiError.getDescription());
